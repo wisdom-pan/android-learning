@@ -3,7 +3,6 @@
 ## 一、安卓基础学习
 
 
-* 自定义View	
 * LinearLayout
 * RelativeLayout
 * FrameLayout
