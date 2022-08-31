@@ -6,6 +6,7 @@
 * [LinearLayout](https://github.com/wisdom-pan/android-learning/tree/LinearLayout)
 * RelativeLayout
 * FrameLayout
+* ConstraintLayout
 * 布局嵌套
 * GridView
 * RecyclerView
