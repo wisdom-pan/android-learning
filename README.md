@@ -1,7 +1,8 @@
-# LinearLayout练习
+# ConstrainLayoutDemo练习
+
 ## 知识点
 - shape样式设置
-- 线性布局嵌套
+- 控件相对位置练习
 - xml布局练习
 
 ## 版本
