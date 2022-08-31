@@ -1,5 +1,6 @@
 # 安卓学习
 学习Android的过程中的一些记录
+内容来自互联网加自己整理
 ## 一、安卓基础学习
 
 
@@ -12,10 +13,6 @@
 * [RecyclerView](https://github.com/wisdom-pan/android-learning/tree/RecyclerView)
 * [Viewpager](https://github.com/wisdom-pan/android-learning/tree/Viewpager)
 * 布局优化
-* TextView
-* ImageView
-* Button
-* CheckBox
 
 
 ## 二、调试以及git管理
