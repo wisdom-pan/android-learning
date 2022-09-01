@@ -15,7 +15,7 @@
 
 
 ## 二、调试以及git管理
-* [log调试]()
+* [log调试](https://github.com/wisdom-pan/android-learning/blob/main/log%E5%B7%A5%E5%85%B7.md)
 * [git管理]()
 * [断点调试]()
 
