@@ -17,7 +17,7 @@
 ## 二、调试以及git管理
 * [log调试](https://github.com/wisdom-pan/android-learning/blob/main/log%E5%B7%A5%E5%85%B7.md)
 * [git管理]()
-* [断点调试]()
+* [断点调试](https://github.com/wisdom-pan/android-learning/blob/main/%E6%96%AD%E7%82%B9%E8%B0%83%E8%AF%95.md)
 
 
 ## 三、安卓四大组件
