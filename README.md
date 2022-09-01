@@ -8,7 +8,6 @@
 * [RelativeLayout](https://github.com/wisdom-pan/android-learning/tree/RelativeLayout)
 * [FrameLayout](https://github.com/wisdom-pan/android-learning/tree/FrameLayout)
 * [ConstraintLayout](https://github.com/wisdom-pan/android-learning/tree/ConstrainLayout)
-* 布局嵌套
 * [GridView](https://github.com/wisdom-pan/android-learning/tree/GridView)
 * [RecyclerView](https://github.com/wisdom-pan/android-learning/tree/RecyclerView)
 * [Viewpager](https://github.com/wisdom-pan/android-learning/tree/Viewpager)
