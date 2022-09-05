@@ -29,6 +29,7 @@
 * [Broadcast]()
 
 ## 四、Fragment实践
+* [fragement练习]()
 * [Fragment实现新闻列表](https://github.com/wisdom-pan/android-learning/tree/FragmentPractice)
 
 ## 五、Android多线程
