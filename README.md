@@ -11,7 +11,7 @@
 * [ConstraintLayout](https://github.com/wisdom-pan/android-learning/tree/ConstrainLayout)
 * [GridView](https://github.com/wisdom-pan/android-learning/tree/GridView)
 * [RecyclerView](https://github.com/wisdom-pan/android-learning/tree/RecyclerView)
-* [Viewpager](https://github.com/wisdom-pan/android-learning/tree/Viewpager)
+* [Viewpager](https://github.com/wisdom-pan/android-learning/tree/ViewPager)
 * 布局优化
 
 
