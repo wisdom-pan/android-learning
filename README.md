@@ -1,8 +1,8 @@
-# ViewPager练习
+# RecyclerView练习
 ## 知识点
-- recleyerview刷新列表
-- viewpager使用
-- 网格布局
+- recyclerview刷新列表
+- 实现线性布局、自适应布局两种布局的刷新
+
 
 ## 版本
 graddle 5.6.4  
