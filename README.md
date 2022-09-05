@@ -1,6 +1,6 @@
 # Fragment练习
 ## 知识点
-- recyclerview刷新列表
+- recyclerview更新列表
 - framelayout+fragement使用
 - xml布局练习
 
