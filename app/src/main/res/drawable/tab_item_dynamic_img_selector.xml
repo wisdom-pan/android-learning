@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 选中状态显示 -->
+    <item android:drawable="@drawable/icon_tab_dynamic_select" android:state_selected="true"/>
+
+    <!--非选中状态显示-->
+    <item android:drawable="@drawable/icon_tab_dynamic_normal"/>
+</selector>

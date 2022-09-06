@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main_tab_item_text_select">#00ceaa</color>
+    <color name="main_tab_item_text_normal">#808288</color>
+
+    <color name="tab_item_background">#ffffffff</color>
+
+    <color name="main_title_text_select">#78ffffff</color>
+    <color name="main_title_text_normal">#ffffffff</color>
+</resources>
