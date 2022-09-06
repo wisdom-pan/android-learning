@@ -6,7 +6,8 @@
 
 
 
-* [LinearLayout](https://github.com/wisdom-pan/android-learning/tree/RelativeLayout)
+* [LinearLayout](https://github.com/wisdom-pan/android-learning/tree/LinearLayout)
+* [RelativeLayout](https://github.com/wisdom-pan/android-learning/tree/RelativeLayout)
 * [FrameLayout](https://github.com/wisdom-pan/android-learning/tree/FrameLayout)
 * [ConstraintLayout](https://github.com/wisdom-pan/android-learning/tree/ConstrainLayout)
 * [GridView](https://github.com/wisdom-pan/android-learning/tree/GridView)
