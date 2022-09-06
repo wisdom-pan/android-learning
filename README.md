@@ -40,7 +40,7 @@
 
 ## 六、Android网络请求、数据存储
 * [http连接]()
-* [OkHttp使用](https://github.com/wisdom-pan/android-learning/tree/OkHttp)
+* [OkHttp使用](https://github.com/wisdom-pan/android-learning/tree/OkHttpDemo)
 * [SharePreferences]()
 * [文件存储]()
 
