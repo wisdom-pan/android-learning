@@ -8,8 +8,13 @@
 graddle 5.6.4  
 graddle插件版本 3.6.4
 
-![demo显示](./image/demo.jpg)
+## demo演示
+### http原生实现
+![http原生实现](./image/demo1.jpg)
 
+### OkHttp实现
+
+![OkHttp实现](./image/demo2.jpg)
 
 
 

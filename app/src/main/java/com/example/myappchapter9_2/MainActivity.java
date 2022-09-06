@@ -39,9 +39,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (v.getId() == R.id.send_request) {
 
             //http原生实现
-            //sendRequestWithHttpURLConnection();
+            sendRequestWithHttpURLConnection();
             //okhttp实现
-            sendRequestWithOkHttp();
+            //sendRequestWithOkHttp();
 
 
         }
