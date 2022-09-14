@@ -1,9 +1,11 @@
 package com.example.customview;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.RectF;
+import android.util.AttributeSet;
 import android.view.View;
 
 import java.util.Random;
@@ -13,7 +15,7 @@ public class MyView extends View {
 
     private Paint paint;//画笔
 
-    private RectF rectF = new RectF(190,190,380,380);
+    private RectF rectF = new RectF(190, 190, 380, 380);
     private int sweepAngle = 0;//初始弧度
     private int sweepAngleAdd = 20;//每次增加20度
     private boolean running = true;//一直更新子线程
@@ -24,57 +26,72 @@ public class MyView extends View {
         super(context);
     }
 
+    public MyView(Context context, AttributeSet attrs) {
+        super(context);
+        init(context, attrs);
+    }
+
+    private void init(Context context, AttributeSet attrs) {
+        //获取自定义属性
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.customStyleView);
+        sweepAngleAdd = typedArray.getInt(R.styleable.customStyleView_sweepAngleAdd, 0);
+        typedArray.recycle();
+        paint = new Paint();
+
+    }
+
     @Override
     protected void onDraw(Canvas canvas) {
 
-        if (null == myThread){
+        if (null == myThread) {
             myThread = new MyThread();
             myThread.start();
 
-        } else{
+        } else {
             //第一个参数是RectF   左上的x y坐标   右下的x y坐标
             //第二个参数是 弧形的开始角度
             //第三个参数是 弧形的结束角度
             //第四个参数是 true:画扇形   false:画弧线
             //第五个参数是 画笔
-            canvas.drawArc(rectF,0,sweepAngle,true,paint);
+            canvas.drawArc(rectF, 0, sweepAngle, true, paint);
 
         }
     }
 
-    private class MyThread extends Thread{
+    private class MyThread extends Thread {
         @Override
         public void run() {
-           while(running){
-               logic();
-               postInvalidate();//重新绘制，orDraw重新调用
-               try{
-                   Thread.sleep(300);
-               } catch (InterruptedException e){
-                   e.printStackTrace();
-               }
+            while (running) {
+                logicAdd();
+                postInvalidate();//重新绘制，orDraw重新调用
+                try {
+                    Thread.sleep(300);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
 
 
-
-           }
+            }
         }
     }
 
-    protected void logic(){
+    protected void logicAdd() {
         sweepAngle += sweepAngleAdd;
 
         //设置画笔颜色,随机选择
         int red = random.nextInt(255);
         int green = random.nextInt(255);
         int blue = random.nextInt(255);
-        paint.setARGB(255,red,green,blue);
+        paint.setARGB(244, red, green, blue);
 
         //弧度大于360度重新开始
-        if (sweepAngle>=360){
-            sweepAngle = 0;
+        if (sweepAngle > 360) {
+            sweepAngle = 320;
         }
 
+
     }
+
 
     @Override
     protected void onDetachedFromWindow() {
@@ -86,10 +103,30 @@ public class MyView extends View {
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 
-        //获取父容器大小
+        //获取父容器大小以及测量模式
         int MeasuredWidth = MeasureSpec.getSize(widthMeasureSpec);
         int MeasuredHeight = MeasureSpec.getSize(heightMeasureSpec);
         int modeWidth = MeasureSpec.getMode(widthMeasureSpec);
         int modeHeight = MeasureSpec.getMode(heightMeasureSpec);
+
+        //宽度为match_parent
+        if (modeWidth == MeasureSpec.EXACTLY) {
+
+            //宽度为wrap_content
+        } else if (modeWidth == MeasureSpec.AT_MOST) {
+            MeasuredWidth = 380;
+
+        }
+        //高度为match_parent
+        if (modeHeight == MeasureSpec.EXACTLY) {
+
+            //高度为wrap_content
+        } else if (modeHeight == MeasureSpec.AT_MOST) {
+            MeasuredHeight = 380;
+
+        }
+        setMeasuredDimension(MeasuredWidth, MeasuredHeight);
+
+
     }
 }
