@@ -45,6 +45,7 @@
 
 ## 七、Android进阶
 * [自定义View](https://github.com/wisdom-pan/android-learning/tree/CustomView)
+* [自定义ViewGroup](https://github.com/wisdom-pan/android-learning/tree/ViewGroup)
 * [NDK使用]()
 * [安卓逆向]()
 * [音视频播放]()
