@@ -20,6 +20,7 @@
 * [log调试](https://github.com/wisdom-pan/android-learning/blob/main/log%E5%B7%A5%E5%85%B7.md)
 * [git管理](https://github.com/wisdom-pan/android-learning/blob/main/git%E7%AE%A1%E7%90%86.md)
 * [断点调试](https://github.com/wisdom-pan/android-learning/blob/main/%E6%96%AD%E7%82%B9%E8%B0%83%E8%AF%95.md)
+* [abd命令](https://github.com/wisdom-pan/android-learning/blob/main/adb%E5%91%BD%E4%BB%A4.md)
 
 
 ## 三、安卓四大组件
@@ -49,7 +50,7 @@
 * [NDK使用]()
 * [安卓逆向]()
 * [音视频播放]()
-* [移动端AI部署]()
+
 
 
 
