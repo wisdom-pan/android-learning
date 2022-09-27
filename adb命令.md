@@ -42,3 +42,18 @@
   
 ### 清除应用数据与缓存
   ```adb shell pm clear <package-name>```
+  
+### 查看应用安装路径
+  ```adb shell pm path <package-name>```
+  
+### 设备的文件传至pc
+  ```adb pull <remote> [local]```
+  
+  * ```<remote>```:设备的文件路径
+  * ```[local]```:pc目录，默认当前目录
+### pc的文件传至设备
+  ```adb push <local> [remote]```
+  
+  * ```<remote>```:设备的文件路径
+  * ```[local]```:pc目录
+
