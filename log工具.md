@@ -1,3 +1,5 @@
+## logcat方法
+
 |  方法   | 描述  |
 |  ----  | ----  |
 | Log.v(String String)(verbose)  | 全部信息 |
@@ -14,4 +16,10 @@
     Log.i  显示预期日志信息
     Log.w  不是错误的潜在信息
     Log.e  显示引发错误的信息
+    
+## locat搜索
+* 采用正则表达式搜索
+* 采用字段搜索
+
+[Android studio Locat工具介绍](https://developer.android.com/studio/debug/am-logcat?hl=zh-cn)
 
