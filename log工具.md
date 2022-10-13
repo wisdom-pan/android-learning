@@ -6,15 +6,12 @@
 | Log.w(String String)(warning)  | 警告信息 |
 | Log.e(String String)(error)  | 错误信息 |
 
-优先级:Error>Warning>Info>Debug>Verbose
+    优先级:Error>Warning>Info>Debug>Verbose
 
-# Log.i
-
-# Log.f
-
-# Log.e
-
-# Log.w
-
-# Log.d
+## 日志级别
+    Log.v   显示所有日志消息(默认)
+    Log.d   在开发过程中的调试信息，级别比较低的消息
+    Log.i  显示预期日志信息
+    Log.w  不是错误的潜在信息
+    Log.e  显示引发错误的信息
 
