@@ -44,6 +44,9 @@
     #查看git配置信息
     git add file
     
+    #查看git配置信息
+    git commit -m <修改信息>
+    
     #提交所有文件
     git add .
     #推送到远程仓库
