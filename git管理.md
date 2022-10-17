@@ -54,13 +54,34 @@
     
 
 ## 撤销提交
-git reset
-## 撤销远程提交
-git reset --soft
-## 版本回退
-git reset
-git remote
-# 分支管理
-## 合并分支
-## 分支冲突
+    #查看commit哈希值
+    git log
+    
+    #撤销commit，保留工作区改动记录
+    git reset --soft [commit-hashcode]
+    
+    #撤销commit，撤销工作区改动记录
+    git reset --hard [commit-hashcode]
+    
+    #取消远程提交
+    git push --force
+    
+
+## 分支管理
+    #查看分支
+    git branch
+    
+    #创建分支
+    git branch <branchname>
+    
+    #切换分支
+    git checkout 
+    
+    #删除分支
+    git branch -d <branchname>
+    
+    #分支合并
+    git merge
+
+
 
