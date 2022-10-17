@@ -28,6 +28,23 @@
 
     #查看git配置信息
     git config --global -l
+        
+    #关联远程仓库
+    git remote add origin [address]
+    
+ 
+## 提交修改
+
+    #查看当前仓库状态
+    git status
+
+    #查看文件修改记录
+    git diff file
+
+    #查看git配置信息
+     git add file
+    #提交所有文件
+    
 
 ## 撤销提交
 git reset
