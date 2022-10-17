@@ -42,8 +42,12 @@
     git diff file
 
     #查看git配置信息
-     git add file
+    git add file
+    
     #提交所有文件
+    git add .
+    #推送到远程仓库
+    git push origin [分支名]
     
 
 ## 撤销提交
