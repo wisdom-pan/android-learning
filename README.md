@@ -35,7 +35,7 @@
 * [Fragment实现新闻列表](https://github.com/wisdom-pan/android-learning/tree/FragmentPractice)
 
 ## 五、Android多线程
-* [子线程更新UI]()
+* [子线程更新UI](https://github.com/wisdom-pan/android-learning/tree/ThreadUpdateUi)
 * [Handler异步传递]()
 * [线程池]()
 
