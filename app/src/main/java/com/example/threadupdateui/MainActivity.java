@@ -1,79 +1,61 @@
 package com.example.threadupdateui;
 
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    private TextView tvContent;
+    private TextView textview;
+
+    public static final int UPDATE_UI=1;
+
+    private Handler handler=new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            if(msg.what==UPDATE_UI){
+                textview.setText("当前值是:"+msg.obj);
+            }
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        tvContent = findViewById(R.id.tv_content);
 
-        findViewById(R.id.btn_runonui).setOnClickListener(onClickListener);
-        findViewById(R.id.btn_viewpost).setOnClickListener(onClickListener);
-    }
+        handler.post(runnable);//执行
+        handler.postDelayed(runnable,2000);
 
-        private View.OnClickListener onClickListener = new View.OnClickListener() {
+        Log.i("MainActivity","当前线程id:"+Thread.currentThread().getId());
+
+        textview= (TextView) findViewById(R.id.textview);
+        new Thread(new Runnable(){
             @Override
-            public void onClick(View view) {
-                switch (view.getId()){
-                    case R.id.btn_runonui:
-                        activityRunOnUiThread();
-                        break;
-                    case R.id.btn_viewpost:
-                        viewPost();
-                        break;
+            public void run(){
+                for(int i=1;i<=100;i++){
+                    Log.i("MainActivity","当前值是:"+i);
+                    Message message=handler.obtainMessage();
+                    message.what=UPDATE_UI;
+                    message.obj=i;
+                    handler.sendMessage(message);
+                    try {
+                        Thread.sleep(200);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
-
             }
-        };
-     private void activityRunOnUiThread(){
-         new Thread(){
-             @Override
-             public void run(){
-                 Log.i("MainActivity","子线程id:"+android.os.Process.myTid());
-                 runOnUiThread(new Runnable() {
-                     @Override
-                     public void run() {
-                         Log.i("MainActivity","主线程id:"+android.os.Process.myTid());
-                         tvContent.setText("runOnUiThread更新ui");
-                     }
-                 });
-             }
-
-
-         }.start();
-     }
-
-     public void viewPost(){
-         new Thread(){
-             @Override
-             public void run(){
-                 tvContent.post(new Runnable() {
-                     @Override
-                     public void run() {
-                         tvContent.setText("View post方式");
-                     }
-                 });
-             }
-         }.start();
-     }
-
-
-
-
-
-
+        }).start();
     }
+
+    private Runnable runnable=new Runnable() {
+        @Override
+        public void run() {
+            Log.i("MainActivity","Handler Runnable 当前线程id:"+Thread.currentThread().getId());
+        }
+    };
+}
