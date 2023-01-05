@@ -36,7 +36,7 @@
 
 ## 五、Android多线程
 * [子线程更新UI](https://github.com/wisdom-pan/android-learning/tree/ThreadUpdateUi)
-* [Handler异步传递]()
+* [Handler异步传递](https://github.com/wisdom-pan/android-learning/tree/Handler)
 * [线程池]()
 
 ## 六、Android网络请求、数据存储
